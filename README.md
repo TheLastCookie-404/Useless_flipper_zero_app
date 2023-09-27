@@ -5,10 +5,9 @@
   That`s all!
 </pre>
 
-<div styles="outline:1px solid red;">
-  <img styles="float:left;" src="screenshots/Screenshot-1.png"/>
-  <img styles="float:right;" src="screenshots/Screenshot-2.png"/>
-</div>
+<img styles="float:left;" src="screenshots/Screenshot-1.png"/>
+</br>
+<img styles="float:right;" src="screenshots/Screenshot-2.png"/>
 
 ## API version of fap is 38.0
 
