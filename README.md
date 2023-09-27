@@ -5,9 +5,9 @@
   That`s all!
 </pre>
 
-<div>
-  <img styles="display:inline-block;" src="screenshots/Screenshot-1.png"/>
-  <img styles="display:inline-block;" src="screenshots/Screenshot-2.png"/>
+<div styles="display:flex; height:fit-content;">
+  <img styles="display:block;" src="screenshots/Screenshot-1.png"/>
+  <img styles="display:block;" src="screenshots/Screenshot-2.png"/>
 </div>
 
 
