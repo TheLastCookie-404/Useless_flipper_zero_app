@@ -5,7 +5,7 @@
   That`s all!
 </pre>
 
-<div styles="height:150px; outline:1px solid red;">
+<div styles="outline:1px solid red;">
   <img styles="float:left;" src="screenshots/Screenshot-1.png"/>
   <img styles="float:right;" src="screenshots/Screenshot-2.png"/>
 </div>
