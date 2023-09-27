@@ -23,6 +23,7 @@ static void app_draw_callback(Canvas* canvas, void* ctx) {
 
     canvas_clear(canvas);
     canvas_draw_icon(canvas, image_position.x % 128, image_position.y % 64, icons[iconsCounter]);
+    canvas_draw_icon(canvas, 104, 51, &I_Arrows);
 }
 
 static void app_input_callback(InputEvent* input_event, void* ctx) {
@@ -50,7 +51,7 @@ int32_t test_app(void* p) {
     bool running = true;
     while(running) {
         if(furi_message_queue_get(event_queue, &event, 100) == FuriStatusOk) {
-            if((event.type == InputTypePress) || (event.type == InputTypeRepeat)) {
+            if(event.type == InputTypePress) {
                 if(event.key == InputKeyRight && iconsCounter < iconsSize) iconsCounter++;
                 if(event.key == InputKeyLeft && iconsCounter > 0) iconsCounter--;
                 if(event.key == InputKeyBack) running = false;
