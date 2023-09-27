@@ -7,7 +7,7 @@
 
 
 <img styles="float:left;" src="screenshots/Screenshot-1.png"/>
-<img styles="float:left;" src="screenshots/Screenshot-2.png"/>
+<img styles="float:right;" src="screenshots/Screenshot-2.png"/>
 
 
 ## API version of fap is 38.0
