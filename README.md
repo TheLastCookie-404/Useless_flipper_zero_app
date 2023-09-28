@@ -1,6 +1,5 @@
 # Useless_flipper_zero_app
 ## Literaly Useless
-## Literaly useless
 
 You can watch meme images by switching < > buttons.
 </br>
