@@ -1,9 +1,11 @@
 # Useless_flipper_zero_app
 ## Literaly Useless
 
-You can watch meme images by switching < > buttons.
+You can watch meme images by switching "< >" buttons.
 </br>
-That`s all!
+If you hold "<" or ">", you can jump to first or last image.
+</br>
+That`s all!!!
 
 
 </br>
