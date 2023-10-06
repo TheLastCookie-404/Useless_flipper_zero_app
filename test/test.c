@@ -9,7 +9,6 @@ typedef struct {
     uint8_t x, y;
 } ImageSize;
 
-ImageSize arrows_size = {.x = 24, .y = 13};
 const Icon* icons[] = {
     &I_Meme,
     &I_Meme2,
@@ -23,8 +22,15 @@ const Icon* icons[] = {
     &I_Meme9,
     &I_Meme10,
     &I_Meme11,
-    &I_Meme12};
-uint iconsSize = (sizeof(icons) / sizeof(icons[0])) - 1; // -1 Because array start with 0
+    &I_Meme12,
+    &I_Meme13,
+    &I_Meme14,
+    &I_Meme15,
+    &I_Meme16,
+    &I_Meme17};
+
+ImageSize arrows_size = {.x = 24, .y = 13};
+uint iconsArrSize = (sizeof(icons) / sizeof(icons[0])) - 1; // -1 Because array start with 0
 uint iconsCounter = 0;
 
 // Screen is 128x64 px
@@ -47,7 +53,7 @@ int32_t test_app(void* p) {
     UNUSED(p);
     FuriMessageQueue* event_queue = furi_message_queue_alloc(8, sizeof(InputEvent));
 
-    FURI_LOG_E(TAG, "Size of array %i", iconsSize);
+    FURI_LOG_E(TAG, "Size of array %i", iconsArrSize);
 
     // Configure view port
     ViewPort* view_port = view_port_alloc();
@@ -64,9 +70,12 @@ int32_t test_app(void* p) {
     while(running) {
         if(furi_message_queue_get(event_queue, &event, 100) == FuriStatusOk) {
             if(event.type == InputTypePress) {
-                if(event.key == InputKeyRight && iconsCounter < iconsSize) iconsCounter++;
+                if(event.key == InputKeyRight && iconsCounter < iconsArrSize) iconsCounter++;
                 if(event.key == InputKeyLeft && iconsCounter > 0) iconsCounter--;
                 if(event.key == InputKeyBack) running = false;
+            } else if(event.type == InputTypeLong) {
+                if(event.key == InputKeyLeft) iconsCounter = 0;
+                if(event.key == InputKeyRight) iconsCounter = iconsArrSize;
             }
         }
     }
