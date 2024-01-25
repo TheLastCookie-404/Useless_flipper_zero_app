@@ -16,7 +16,6 @@ const Icon* icons[] = {
     &I_Meme4,
     &I_Meme5,
     &I_Meme6,
-    &I_Rei,
     &I_Meme7,
     &I_Meme8,
     &I_Meme9,
@@ -30,8 +29,8 @@ const Icon* icons[] = {
     &I_Meme17};
 
 ImageSize arrows_size = {.x = 24, .y = 13};
-uint iconsArrSize = (sizeof(icons) / sizeof(icons[0])) - 1; // -1 Because array start with 0
-uint iconsCounter = 0;
+int iconsArrSize = (sizeof(icons) / sizeof(icons[0])) - 1; // -1 Because array start with 0
+int iconsCounter = 0;
 
 // Screen is 128x64 px
 static void app_draw_callback(Canvas* canvas, void* ctx) {
