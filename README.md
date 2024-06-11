@@ -13,6 +13,6 @@ That`s all!!!
 </br>
 <img styles="float:right;" src="screenshots/Screenshot-2.png"/>
 
-### API version of fap is 50.1
+### API version of fap is 62.3
 
 
